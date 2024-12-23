@@ -2,6 +2,7 @@ import aioble
 import asyncio
 import machine
 import time
+import os
 
 class blescan:
     def __init__(self, ble, sdcard):
@@ -22,4 +23,3 @@ class ble_bruteforce:
     def __init__(self):
         pass
     
-a
