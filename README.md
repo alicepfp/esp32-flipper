@@ -126,13 +126,13 @@ Distributed under the AGPL-3.0 License. See `LICENSE` for more information.
 
 
 [forks-shield]: https://img.shields.io/github/forks/alicepfp/esp32-flipper.svg?style=for-the-badge
-[forks-url]: https://github.com/alicepfp/esp32-flipper/network/members
+[forks-url]: https://github.com/alicepfp/esp32-fox-zero/network/members
 [stars-shield]: https://img.shields.io/github/stars/alicepfp/esp32-flipper.svg?style=for-the-badge&color=yellow
-[stars-url]: https://github.com/alicepfp/esp32-flipper/stargazers
+[stars-url]: https://github.com/alicepfp/esp32-fox-zero/stargazers
 [issues-shield]: https://img.shields.io/github/issues/alicepfp/esp32-flipper.svg?style=for-the-badge
-[issues-url]: https://github.com/alicepfp/esp32-flipper/issues
+[issues-url]: https://github.com/alicepfp/esp32-fox-zero/issues
 [license-shield]: https://img.shields.io/github/license/alicepfp/esp32-flipper.svg?style=for-the-badge
-[license-url]: https://github.com/alicepfp/esp32-flipper/blob/main/LICENSE
+[license-url]: https://github.com/alicepfp/esp32-fox-zero/blob/main/LICENSE
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/linkedin_username
 [mail-shield]: https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white
