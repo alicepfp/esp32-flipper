@@ -1,11 +1,12 @@
+import usocket as socket
+import wifi_lib as wifi
+import packet_lib as packet
 import network
 import binascii
 import machine
 import time
 import _thread
 import os
-import usocket as socket
-import wifi_lib as wifi
 
 machine.freq(240000000)
 
@@ -69,7 +70,7 @@ class PacketSniffer(Common):
             for ch in range(1, 13):
                 self.sta.config(channel=ch)
                 print("Hopping to channel {}".format(ch))
-                time.sleep(3)
+                time.sleep(5)
     
     def probe_req(self, probe_req_res):
         self.sck.bind(("127.0.0.1", 20001))
@@ -85,12 +86,12 @@ class PacketSniffer(Common):
                     packet_bssid = wifi.raw_to_hex(self.pck.addr3).decode('utf-8')
                     try:
                         probe_ssid = tags[0][0].decode('utf-8')
-                        probe_req_res = "{:d} PROBE REQUEST: {} > {}  {} '{}'".format(self.channel,packet_src,packet_dst,packet_bssid,probe_ssid)
+                        probe_req_res = "{:d} Probe Request: {} > {}  {} '{}'".format(self.channel,packet_src,packet_dst,packet_bssid,probe_ssid)
                         print(probe_req_res)
                     except OSError as e:
-                        print("ERROR: {}".format(e))
+                        print("Error in probe request: {}".format(e))
             except OSError as e:
-                print("ERROR: {}".format(e ,temp_packet))
+                print("Error: {}".format(e ,temp_packet))
     
     def probe_resp(self, probe_resp_res):
         self.sck.bind(("127.0.0.1", 20001))
@@ -105,12 +106,12 @@ class PacketSniffer(Common):
                     packet_bssid = wifi.raw_to_hex(self.pck.addr3).decode('utf-8')
                     try:
                         probe_ssid = tags[0][0].decode('utf-8')
-                        probe_resp_res = "{:d} PROBE RESPONSE: {} > {}  {} '{}'".format(self.channel,packet_src,packet_dst,packet_bssid,probe_ssid)
+                        probe_resp_res = "{:d} Probe Response: {} > {}  {} '{}'".format(self.channel,packet_src,packet_dst,packet_bssid,probe_ssid)
                         print(probe_resp_res)
                     except OSError as e:
-                        print("ERROR: {}".format(e))
+                        print("Error in probe response: {}".format(e))
             except OSError as e:
-                print("ERROR: {}".format(e ,temp_packet))
+                print("Error: {}".format(e ,temp_packet))
         
     def sniffer(self, probe_req_res, probe_resp_res, results):
         print("Starting UDP listener thread to recieve wifi packets...")
@@ -136,13 +137,21 @@ class PacketSniffer(Common):
             print("Error saving file: {}".format(e))
 
 class NetBruteforce(Common):
-    def __init__(self):
+    def __init__(self, passwords, ssid):
         super().__init__()
         self.sta.active(True)
+        self.passwords = []
+        self.ssid = ''
+    
+    def passwordlist(self):
+        try:
+            with open('/sd/passwords.txt', 'r') as f:
+                self.passwords = f.read().splitlines()
+        except OSError as e:
+            print("Error reading password list: {}".format(e))
     
     def bruteforce(self):
         pass
-    
 
 class NetJammer(Common):
     def __init__(self):
