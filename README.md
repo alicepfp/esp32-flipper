@@ -17,7 +17,7 @@
 </div>
 
 > [!WARNING]
-> This project was made for educational purposes only, use with responsability.
+> This project was made for educational purposes, it is intended for legal and authorized security testing only. Use of this software for any malicious or unauthorized activities is strictly prohibited. The developers assume no liability for any misuse of the software. Use at your own risk.
 
 <details>
   <summary>Table of Contents</summary>
@@ -28,29 +28,27 @@
         <li><a href="#built-with">Built With</a></li>
       </ul>
     </li>
+    <li><a href="#hardware">Hardware</a></li>
+    <li><a href="#installation/flashing">Installation/Flashing</a></li>
     <li>
-      <a href="#getting-started">Getting Started</a>
+      <a href="#features">Features</a>
     </li>
-    <li>
-      <a href="#usage">Usage</a>
-    </li>
-    <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
-    <li><a href="#contact">Contact</a></li>
+    <li><a href="#contact-and-funding">Contact and Funding</a></li>
   </ol>
 </details>
 
 
 ## About The Project
 
-The ESP32 Fox Zero project offers a versatile, educational, and cost-effective alternative to the Flipper Zero, built around the ESP32 microcontroller and Micropython. It's designed for hobbyists, students, and developers to explore hardware-software integration, including features like wireless communication and sensor interaction.
+The ESP32 Fox Zero project is a flexible, budget-friendly option for those interested in learning about hardware and software integration. Built around the ESP32 microcontroller and using Micropython, it's a great tool for hobbyists, students, and developers to explore wireless communication, sensor interaction, and more.
 
-As an open-source initiative, it invites community collaboration with a repository full of detailed documentation, schematics, and code examples. Micropython ensures accessibility, making it easier for beginners to understand and adapt the code.
+As an open-source project, it encourages community involvement, with a repository that includes detailed guides, schematics, and code examples. Micropython makes it beginner-friendly, so even those new to coding can easily understand and modify the project.
 
-The hardware setup includes an ESP32, display, NFC/RFID module, sub-GHz module, infrared transmitter/receiver, and buttons. Its modular design allows customization and experimentation with different configurations. Clear assembly guidelines are provided to simplify hardware setup.
+The hardware setup features an ESP32, a display, NFC/RFID and sub-GHz modules, an infrared transmitter/receiver, and buttons. Its modular design allows for customization, and step-by-step instructions make assembly straightforward.
 
-This project is a hands-on gateway to embedded systems and IoT, offering learning opportunities and a platform for innovation. Perfect for beginners and experienced developers alike, its a chance to explore, build, and contribute to an active open-source community.
+This project is a practical way to dive into embedded systems and IoT, offering plenty of opportunities to learn and innovate. Whether you're just starting out or have experience, it's a great way to experiment, build, and contribute to an active open-source community.
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -65,25 +63,75 @@ This project is a hands-on gateway to embedded systems and IoT, offering learnin
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
-## Getting Started
+## Hardware
 
+For this project you can use the hardware that better suits you, but the tested one currently consists:
 
+- ESP32 C3 Mini 1 N4 Risc-V
+- LCD TFT Display
+- MicroSD Card Module
+- 433MHz RF Transmiter and Receiver
+- NFC/RFID Reader
+- IR Encoder Decoder Tx Rx lo
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
-## Usage
+## Installation/Flashing
 
-
+```To be implemented```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
-## Roadmap
+## Features
 
+### WiFi
 
+- [ ] Connect to WiFi
+- [ ] WiFi AP
+- [X] Scanner
+- [X] Packet Sniffer
+- [ ] TCP Client
+- [ ] TCP Listener
+- [X] WiFi Attacks
+  - [X] Bruteforce
+  - [ ] Beacon Spam
+- [ ] Captive Portal
 
-See the [open issues](https://github.com/alicepfp/esp32-flipper/issues) for a full list of proposed features (and known issues).
+### Bluetooth
+
+- [ ] Scanner
+- [ ] Jammer
+- [ ] Bad BLE
+
+### RFID
+
+- [ ] Read Tag
+- [ ] Clone Tag
+- [ ] Write Data
+- [ ] Erase Data
+- [ ] Save File
+- [ ] Load File
+- [ ] Emulate Tag
+
+### Radio
+
+- [ ] FM Spectrum
+- [ ] Broadcast Standart
+- [ ] Broadcast Stop
+
+### IR
+
+- [ ] TV Controller
+- [ ] IR Receiver 
+
+### Others
+
+- [X] Micropython REPL
+- [ ] SD Card Manager
+
+See the [open issues](https://github.com/alicepfp/esp32-fox-zero/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -114,13 +162,13 @@ Distributed under the AGPL-3.0 License. See `LICENSE` for more information.
 
 
 
-## Contact
-
-[![Gmail][mail-shield]][mail-url]
+## Contact and Funding
 
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
 [![Github][git]][git-url]
+
+[![BuyMeACoffee][coffee]][coffee-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -133,10 +181,8 @@ Distributed under the AGPL-3.0 License. See `LICENSE` for more information.
 [issues-url]: https://github.com/alicepfp/esp32-fox-zero/issues
 [license-shield]: https://img.shields.io/github/license/alicepfp/esp32-flipper.svg?style=for-the-badge
 [license-url]: https://github.com/alicepfp/esp32-fox-zero/blob/main/LICENSE
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
+[linkedin-shield]: https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white
 [linkedin-url]: https://linkedin.com/in/linkedin_username
-[mail-shield]: https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white
-[mail-url]: alicepfp@labnet.nce.ufrj.br
 [python]: https://img.shields.io/badge/python-gray?style=for-the-badge&logo=python&logoColor=white&labelColor=blue
 [git]: https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white
 [git-url]: https://github.com/alicepfp
@@ -144,3 +190,5 @@ Distributed under the AGPL-3.0 License. See `LICENSE` for more information.
 [micro-url]: https://micropython.org/
 [esp]: https://img.shields.io/badge/espressif-E7352C?style=for-the-badge&logo=espressif&logoColor=white
 [esp-url]: https://docs.espressif.com/projects/esp-idf/en/stable/esp32/index.html
+[coffee]: https://img.shields.io/badge/Buy_Me_A_Coffee-FFDD00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black
+[coffee-url]: https://buymeacoffee.com/alicepfp
