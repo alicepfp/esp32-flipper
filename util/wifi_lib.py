@@ -3,7 +3,7 @@ import network
 
 
 ## USAGE
-# >>> import wifi
+# >>> import wifi_lib as wifi
 
 ## Define a new packet class
 # >>> new_packet = wifi.packet()

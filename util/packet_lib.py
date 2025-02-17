@@ -1,7 +1,7 @@
 
-## Make sure you have uploaded wifi.py to the ESP32.
+## Make sure you have uploaded wifi_lib.py to the ESP32.
 ## Usage:
-## >>> import mp_wifi_packet_per_second
+## >>> import packet_lib as packet
 ## Output will be:
 ## <Channel> <PacketsPerSecond>
 ## Example output:
